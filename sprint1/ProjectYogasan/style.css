@@ -1,0 +1,245 @@
+body{
+    color: #000000;
+    font-size: 14px;
+    font-family: Railway;
+    line-height: 1.80;
+    font-weight: normal;
+    overflow-x: hidden;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.logo{
+    width: 45%
+}
+
+.full-bg{
+    background-image: url("images/banner-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding-bottom: 550px;
+    padding-top: 100px;
+}
+
+
+.yogaText{
+    width: 100%;
+    float: left;
+    font-size: 60px;
+    color: #8b57fc;
+    font-weight: 500;
+}
+
+.bodyText{
+    width: 100%;
+    float: left;
+    font-size: 60px;
+    color: black;
+    font-weight: 500;
+}
+
+.descText{
+    width: 50%;
+    float: left;
+    font-size: large;
+    margin-top: 20px;
+    color: rgb(183, 81, 122);
+}
+
+.contactBtn{
+    width: 100%;
+    float: left;
+    margin-top: 50px;
+}
+.contactBtn a{
+    width: 20%;
+    float: left;
+    font-size: 18px;
+    color: aliceblue;
+    background-color: rgb(30, 163, 158);
+    text-align: center;
+    padding: 15px 0px;
+}
+
+.contactBtn a:hover{
+    color: aliceblue;
+    background-color: rgb(146, 47, 47);
+}
+
+.bg-darkfornav{
+    background-color: #8b57fc !important;
+}
+
+.ourClasses{
+    padding-top: 40px;
+    text-align: center;
+}
+
+.ourClasses h1{
+    color: #00b3ff;
+    font-size: 38px;
+}
+
+.ourClasses p{
+    color: rgb(255, 119, 0);
+}
+
+.classesHeading{
+    text-align: left;
+    padding-top: 15px;
+    padding-bottom: 40px;
+    font-size: 80px;
+}
+section{
+    padding-bottom: 30px;
+}
+footer{
+    text-align: center;
+    font-size: 16px;
+}
+
+.ContactUs{
+    padding-top: 20px;
+    margin-bottom: 20px
+}
+
+.mailText{
+    width: 100%;
+    float: left;
+    font-size: 16px;
+    color: azure;
+    border: 0px;
+    border-bottom: 1px solid #fcfdfc;
+    background-color: transparent !important;
+    padding: 10px 30px 0px 0px;
+    margin-bottom: 30px;
+}
+
+.sendMail{
+    margin-bottom:20px;
+    background-color: #ea15e2;
+    color: #ffffff;
+    padding: 10px 20px;
+}
+
+.sendMail:hover{
+    background-color: #fcfdfc;
+    color: #000000;
+}
+
+.socialIcon{
+    width: 100%;
+    float: left;
+    margin-bottom: 10px;
+}
+
+.socialIcon ul{
+    padding: 0px;
+    margin: 0px;
+}
+.socialIcon li{
+    float: left;
+    padding-left: 40px;
+}
+
+.map{
+    width: 100%;
+}
+.callText{
+    padding-top: 20px;
+    float: left;
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+
+.about{
+    background-image: url(images/about-bg.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 100px;
+    padding-bottom: 550px;
+}
+
+.aboutMain{
+    width: 60%;
+    float: left;
+    background-color: #8b57fc;
+    height: auto;
+    padding: 60px 40px;
+    border-radius: 100px;
+    margin-top: 80px;
+    
+    color: #ffffff;
+}
+.aboutHeading{
+    width: 100%;
+    float: left;
+    font-size: 50px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.aboutDescription{
+    width: 100%;
+    font-size: 16px;
+    float: left;
+    text-align: center;
+    margin-left: 0px;
+    color: #ffffff;
+}
+
+.aboutMainbtn{
+    width: 60%;
+    text-align: center; 
+}
+.aboutBtn{
+    width: 100%;
+    float: left;
+    font-size: 25px;
+    margin-top: 30px;
+    background-color: #ea15e2;
+}
+.aboutBtn a{
+    color: #ffffff;
+}
+
+.loginText{
+    width: 100%;
+    float: left;
+    font-size: 40px;
+    color: #8b57fc;
+    font-weight: 500;
+}
+
+#loginBtn a{
+    width: 20%;
+    float: left;
+    font-size: 18px;
+    color: #000000;
+    background-color: rgb(30, 163, 158);
+    text-align: center;
+    padding: 0px auto;
+}
+
+#loginBtn a:hover{
+    color: aliceblue;
+    background-color: rgb(146, 47, 47);
+}
+
+.label{
+    font-size: 25px;
+}
+
+.name{
+    margin: 10px;
+    border: solid 3px pink;
+    border-radius: 25px;
+}
+.resister{
+    font-size: 23px;
+}
