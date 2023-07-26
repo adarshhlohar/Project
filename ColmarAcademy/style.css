@@ -1,0 +1,365 @@
+html {
+    font-size: 16px;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  strong {
+    font-weight: bold;
+  }
+  
+  h3 {
+    font-weight: bold;
+  }
+  
+  .media-container {
+    overflow: hidden;
+  }
+  
+  .media-container img,
+  .media-container video {
+    display: block;
+    width: 100%;
+  }
+  
+  .flex-content {
+    display: flex;
+    padding: 0 24px;
+  }
+  
+  .flex-content .main-content {
+    width: 60%;
+    padding: 36px 24px 36px 0;
+    border-right: 1px solid rgb(245, 245, 245);
+  }
+  
+  .flex-content .supporting-content {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    padding: 36px 0;
+  }
+  
+  .content-image-box {
+    display: flex;
+    padding: 16px 0 16px 16px;
+    border-bottom: 1px solid rgb(245, 245, 245);
+  }
+  
+  .content-image-box:first-child {
+    padding-top: 0;
+  }
+  
+  .content-image-box:last-child {
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+  
+  .content-image-box .media-container {
+    width: 35%;
+  }
+  
+  .content-image-box .text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 65%;
+    padding: 0 12px 0 16px;
+  }
+  
+  .content-image-box h4 {
+    padding-bottom: 8px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .content-image-box p {
+    padding-bottom: 8px;
+  }
+  
+  .content-image-box .mobile {
+    display: none;
+  }
+  
+  
+  @media only screen and (max-width: 895px) {
+    .content-image-box .desktop {
+      display: none;
+    }
+  
+    .content-image-box .mobile {
+      display: block;
+    }
+  
+    .content-image-box {
+      padding-left: 0;
+      border-bottom: none;
+    }
+  
+    .content-image-box .media-container {
+      width: 100%;
+    }
+  }
+  
+  header {
+    padding: 16px 24px;
+  }
+  
+  header .desktop {
+    display: flex;
+    align-items: center;
+  }
+  
+  header .logo {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+  }
+  
+  header .logo img {
+    margin-right: 8px;
+  }
+  
+  header li {
+    display: inline;
+    padding-right: 16px;
+  }
+  
+  header li:last-child {
+    padding-right: 0;
+  }
+  
+  header .mobile {
+    display: none;
+  }
+  
+  @media only screen and (max-width: 550px) {
+    header .desktop {
+      display: none;
+    }
+  
+    header .mobile {
+      display: block;
+      width: 100%;
+    }
+  
+    header .mobile ul {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+  
+    .logo {
+      justify-content: center;
+    }
+  
+    .logo span {
+      display: none;
+      color: grey;
+    }
+  
+    nav {
+      display: none;
+    }
+  }
+  
+  #banner {
+    background-color: rgb(219, 219, 219);
+  }
+  
+  #banner .main-content {
+    border-right: none;
+  }
+  
+  #banner .supporting-content {
+    justify-content: center;
+  }
+  
+  #banner h3 {
+    padding-bottom: 3px;
+    font-size: 36px;
+  }
+  
+  #banner p {
+    padding-bottom: 24px;
+  }
+  
+  #banner a {
+    padding: 8px 0;
+    background-color:black;
+    text-align: center;
+    color: white;
+  }
+  
+  @media only screen and (max-width: 770px) {
+    #banner {
+      flex-direction: column;
+      padding: 0;
+    }
+  
+    #banner .main-content {
+      width: auto;
+      padding: 0;
+    }
+  
+    #banner .supporting-content {
+      width: auto;
+      padding: 36px 16px;
+    }
+  }
+  
+  #information-section .main-content h3 {
+    padding-top: 36px;
+    padding-bottom: 24px;
+    font-size: 24px;
+  }
+  
+  #information-section .supporting-content {
+    justify-content: space-between;
+  }
+  
+  @media only screen and (max-width: 895px) {
+    #information-section.flex-content {
+      padding: 0 16px;
+    }
+  
+    #information-section .main-content {
+      display: none;
+    }
+  
+    #information-section .supporting-content {
+      width: 100%;
+    }
+  
+    #information-section .supporting-content .content-image-box {
+      flex-direction: column;
+    }
+  
+    #information-section .text-content {
+      max-width: 250px;
+      padding: 16px;
+    }
+  }
+  
+  #courses-section {
+    padding: 36px 56px;
+    background-color: rgb(245, 245, 245);
+  }
+  
+  .courses-row {
+    display: flex;
+  }
+  
+  .course {
+    flex-basis: 33%;
+    margin: 16px;
+    background-color: white;
+  }
+  
+  .course .text-content {
+    padding: 16px 16px 24px 16px;
+  }
+
+  h2 {
+    padding-bottom: 1rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 36px;
+  }
+  
+  .course h3,
+  .course h4 {
+    padding-bottom: 8px;
+  }
+  
+  @media only screen and (max-width: 770px) {
+    #courses-section {
+      padding: 36px 16px;
+      background-color: inherit;
+    }
+  
+    .courses-row {
+      flex-direction: column;
+    }
+  
+    .course {
+      margin: 4px 0;
+    }
+  
+    .course .text-content {
+      background-color: rgb(216, 216, 216);
+    }
+  
+    .course h3 {
+      padding-bottom: 0;
+    }
+  
+    .course .media-container,
+    .course h4,
+    .course p {
+      display: none;
+    }
+  }
+  
+  #thesis-section {
+    padding: 36px 0;
+  }
+  
+  #thesis-section .main-content {
+    padding-bottom: 0;
+  }
+  
+  #thesis-section h3 {
+    padding: 8px 0;
+  }
+  
+  @media only screen and (max-width: 895px) {
+    #thesis-section .main-content h3,
+    #thesis-section .main-content p,
+    #thesis-section .supporting-content {
+      display: none;
+    }
+  
+    #thesis-section {
+      padding-bottom: 24px;
+    }
+  
+    #thesis-section .flex-content {
+      padding: 0;
+    }
+  
+    #thesis-section .main-content {
+      width: 100%;
+      padding: 0;
+      margin-right: 0;
+    }
+  }
+  
+  footer {
+    display: flex;
+    padding: 16px 24px;
+    font-size: 12px;
+    color: rgb(112, 112, 112);
+  }
+  
+  footer .copyright {
+    flex-grow: 1;
+  }
+  
+  footer a {
+    margin-right: 12px;
+  }
+  
+  footer a:last-child {
+    margin-right: 0;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    footer a {
+      display: none;
+    }
+  }
+
