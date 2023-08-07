@@ -1,1 +1,3 @@
-pallindromeUsingWhile
+class Trainee extends Employee {
+
+// }
