@@ -1,3 +1,0 @@
-class Trainee extends Employee {
-
-// }
