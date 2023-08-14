@@ -1,3 +1,1 @@
-class Trainee extends Employee {
-
-// }
+area
