@@ -29,6 +29,7 @@ class Employee {
 
 class Manager extends Employee {
     double Salary;
+
     Manager(long employeeId, String employeeName, String employeeAddress, long employeePhone, double Salary) {
         super(employeeId, employeeName, employeeAddress, employeePhone);
         this.employeeId = employeeId;
@@ -36,11 +37,12 @@ class Manager extends Employee {
         this.employeePhone = employeePhone;
         this.employeeAddress = employeeAddress;
         this.Salary = Salary;
-        }
-        public void display(){
-            super.display();
-            System.out.println("The salary of manager is  : " + Salary);
-        }
+    }
+
+    public void display() {
+        super.display();
+        System.out.println("The salary of manager is  : " + Salary);
+    }
 }
 
 class Trainee extends Employee {
@@ -61,6 +63,7 @@ public class employeeEgUsingClass {
         Adarsh.display();
 
         Manager Mahesh = new Manager(eId, eName, eAddress, ePhone, eSalary);
-        Mahesh.display();;
+        Mahesh.display();
+        ;
     }
 }

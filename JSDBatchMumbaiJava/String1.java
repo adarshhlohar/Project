@@ -5,7 +5,7 @@ import java.util.StringTokenizer;
 
 // mutable String
 // StringBuilder - Async
-// StringBuffer - sync
+// StringBuffer - sync        
 
 public class String1 {
 
@@ -55,15 +55,15 @@ public class String1 {
         // StringBuilder - Async
         // StringBuffer - sync
         StringBuffer ssb = new StringBuffer("Heello");
-        System.out.println(ssb); //Heello
+        System.out.println(ssb); // Heello
         ssb.append(" Student ");
-        System.out.println(ssb); //Heello Student
-        ssb.insert(7,"good morning");
-        System.out.println(ssb);  //Heello good morningStudent
-        ssb.delete(2,6);
-        System.out.println(ssb); //Heello good morningStudent
+        System.out.println(ssb); // Heello Student
+        ssb.insert(7, "good morning");
+        System.out.println(ssb); // Heello good morningStudent
+        ssb.delete(2, 6);
+        System.out.println(ssb); // Heello good morningStudent
         ssb.replace(3, 8, " Very good ");
-        System.out.println(ssb);  //Heello good morningStudent
+        System.out.println(ssb); // Heello good morningStudent
         ssb.reverse();
         System.out.println(ssb);
         int len = ssb.length();
