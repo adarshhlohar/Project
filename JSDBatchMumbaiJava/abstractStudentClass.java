@@ -1,7 +1,10 @@
 abstract class Student {
     String Name;
     int Id;
-
+    Student(String n, int i){
+        this.Name = n;
+        this.Id = i;
+    }
     abstract void display();
 }
 
@@ -11,8 +14,7 @@ class Exam extends Student {
     int math;
 
     Exam(int physics, int chemistry, int math, String Name, int Id) {
-        this.Id = Id;
-        this.Name = Name;
+        super(Name, Id);
         this.physics = physics;
         this.chemistry = chemistry;
         this.math = math;
@@ -27,5 +29,5 @@ class Exam extends Student {
 
 public class abstractStudentClass {
     Exam s1 = new Exam(98,95,99,"Adarsh",121);
-    s1.display();
+    s1.display1();
 }
