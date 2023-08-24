@@ -12,7 +12,8 @@ public class Arralist {
         al.add(null);
         al.add("Dhiraj");
         al.add("Shaam");
-
+        // al.addFirst("Suresh");   we cannot add element using addFirst Methode
+        // al.addLast("Ramesh"); we cannot add element using addLast Methode
         al2.addAll(al);
         System.out.println(al2);
         System.out.println(al);
@@ -25,12 +26,14 @@ public class Arralist {
         // }
 
         // Traversing using for loop
+        System.out.println("Traversing using for loop");
         for (int i = 0; i < al.size(); i++) {
             System.out.print(al.get(i) + ", ");
         }
 
-        // Traversing using for each
         System.out.println();
+        // Traversing using for each
+        System.out.println("Traversing using for each");
 
         for (String str : al) {
             System.out.print(str + ", ");
@@ -42,7 +45,7 @@ public class Arralist {
 
         System.out.println("Using the iterator");
         while (itr.hasNext()) {
-            System.out.println(itr.next());
+            System.out.print(itr.next() + " ");
         }
     }
 }
