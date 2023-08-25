@@ -1,0 +1,457 @@
+Java
+- programming lang
+- object oriented lang
+- secure lang
+- platform independent --- JRE
+- was developed by sun microsytems 
+- James Gosling is father of java 
+- Oak to Java 
+
+
+JRE - runtime environment, it is set of software tools which are used
+for developing java appl. It contains set of required library + other files that JVM will use
+It physically exists.
+JDK - development kit, it is software development environment used to develop java appl
+it physically exists. It contains JRE + developemnt tools(JVM,JAVAC,JAR,JAVADOC)
+JVM - virtual machine, specification that provides runtime environment in which java 
+bytecode can be executed. It performs task like load code, verifies code, executes code, 
+provide runtime environment 
+JIT
+
+
+types
+- standalone appl/ desktop appl
+- web appl
+- enterprise appl
+- mobile appl
+
+
+java platform
+- java se (standard edition)
+- java ee (enterprise edition)
+- java me (micro edition)
+
+syntax
+class Classname{
+//code
+	public static void main(){ //entry point
+		//code
+	}
+}
+saveas : Classname.java 
+
+runnning an java program
+compile -- javac classname.java (check for syntax msitake)
+will create .class file after successful compiling
+execute -- java classname (check logical part & show an output)
+
+Variables
+container which holds value in program 
+it will assigned with datatype 
+- local
+    declared inside method body
+	can be used outside method
+	cannot be defined as static 
+
+instance
+  declared in class but outisde method
+  cannot be static 
+
+static
+   declared with static keyword 
+   cannot be local
+   will be access with classname
+
+datatype
+primitive : size is fixed
+boolean,char,byte
+number : short,int,long,float,double
+non-primitive : size is not fixed
+String, Array, Class
+
+
+syntax : datatype variablename; //define
+datatype variablename= value; //delare & define 
+
+Object 
+- it an real world entity 
+- its a physical & logical entity
+- an entity which has state(data) & behavior(functionality)
+- its an instance(result) of class 
+Syntax:
+Classname objectname = new Classname();
+
+Class
+- its a logical entity, cant be physical
+- contains common properties & groups of object(variables, methods)
+- it is a template or blueprint
+syntax :
+class Classname{
+	variables
+	method()
+}
+
+Method
+- block of code to perform a certain task/operations 
+- method same as function
+- code reusability
+- easy modification & code readability
+- can be access with object, if not static
+
+returntype methodname(parameters){
+}
+returntype- datatype of method. it can primitive, void,object
+*method does not return anything, we use void*
+
+
+
+Static
+- used for memory mgmt/ memory efficient (save memory)
+- can apply on variables, method
+- belongs to class rather than object/instance of a class
+
+Operators
+- arithmetic + - * / %
+- logical && || !
+- relational / comparison > < >=<=
+- assignment = += -= *= /= %=
+- ternary ?:
+- unary  ++ --
+
+Control Stmt 
+If...else
+Nested If
+If...elseif...else
+Switch
+
+Loops- iteration
+for
+while
+do...while
+
+break : loop is immediately terminated and program resumes at the next stmt
+continue : used in loop control structure when you need to jump to next iteration of loop
+immediately (used to continue the loop)
+
+
+OOP(Object Oriented Programming)
+Class & Object
+static keyword
+method
+this, final, super keyword
+constructor
+Inhertiance
+Polymorphism
+Encapsulation
+Abstraction
+
+
+constructor
+- is a block of code same as method
+- constructor name should always be same as Classname 
+- will never have an returntype, its returntype will be same as class
+- it is called as special type of method because used to initialize object
+- Memory for object is allocated in memory when we call constructor 
+- Every time an object created using NEW keyword, at least one constructor is called.
+- is used to assign default value to parameters in class
+- it is not necessary to create constructor of class because javac creates an default 
+constructor if you class doesnt have any. (default constructor will get call, if no constructor)
+
+Inhertiance
+- mechanism in which one object acquires property & function of parent object
+- it is IS-A relationship (parent-child)
+- reuse existing class properties & method in new class
+- use : code reusability
+- types : single, multilevel, hierarchical
+- multiple inheritance is not supported in java through class 
+syntax:
+class Parentname{
+//fields & method
+}
+class childname extends Parentname{
+//fields & methos
+}
+
+
+Aggregation
+- it is HAS-A relationship
+- It like an entity reference
+
+Polymorphism
+- many forms
+- perform single action/task in different ways
+- compiletime(overloading), runtime(overriding)
+Method Overloading
+- class has multiple methods having same method name & returntype.
+- increases program readability.
+- 1. changing no of parameters
+  2. changing datatype
+
+void add(a,b) //int
+void add(a,b) //double
+
+void add(a,b)
+void add(a,b,c)
+
+Method Overriding
+- child class has same method as declared in parent class 
+- can be implemented using is-a relationship
+- method name & parameters must be same in parent & child
+- cannot use final keyword for variables & method
+- access parent method using super keyword 
+
+
+Access Modifiers
+- specifies the scope of parameters, method, class
+- public(access to everywhere), default(access within package),
+  protected(access within package, outisde package using subclass),
+  private(access to class)
+
+Encapsulation
+- process of wrapping code/data together in single unit
+- can be implemented by using class with private data, can use with getter setter methods
+- Java bean class example of encapsulation 
+- achieve data hiding 
+
+Abstraction
+- process of hiding the implementation/details and show only functionality 
+- it shows only essential things to user, hides internal details 
+
+ways
+- class 0-100% 
+- interface 100%
+
+Abstract class
+- use abstract keyword
+- can have abstract & non-abstract method
+- cannot be instantiated
+- can have constructor, static method, final method
+
+Interface
+- blueprint of class
+- to achieve abstraction
+- it will have abstract method 
+- to achieve multiple inheritance
+- cannot be instantiated like abstract class 
+- class will implement interface 
+
+Array 
+- collection of similar type of data/elements
+- object contains all similar datatype elements which is store in contigous mememory
+- can store only a fixed number of elements
+- elements stored in index-based, first element stored at 0th index and so on.
+- adv: code optimization & random access
+
+types:
+single
+multidimensional
+
+
+- java.lang.String
+- CharSequence interface : String, StringBuffer, StringBuilder
+String
+- sequence of char values
+- character array is same as String
+	char arr1[] = new char[] {'m','a','m','t','a'};
+		String s = new String(arr1);
+		//or
+		String arrr= "aaaaa";
+		String arrr1 = "aaaaa"; //Mamta Boga
+- String is immutable(cannot be changed)
+- in string literal JWM checks in String Constant Pool, if string
+does not exists then new string instance is created & if exists then reference to pool instnace is returned.
+- in  string with new keyword, new string object created as normal. 
+- toUppercase(), toLowercase(), replace(), length(), charAt(), valueOf(), subString()
+- comparison (==, equals(), compareTo())
+- concatentation (+, concat())
+- String Tokenizer : break a string into tokens
+
+- String mutuable(change/modify)
+1. StringBuilder : non-synchronized, more efficient
+2. StringBuffer : synchronized, bit less efficient
+length, substring(), repalce(), insert(), delete(), append(), charAt(), reverse()
+
+Exception handling
+- unwanted/abnormal condition
+- mechanism to handle the abnormal condition so we can maintain normal flow in runtime
+
+Error -- irrecoverable
+VirtutalMachine Error, OutOfMemory Error
+Exception
+1. Checked Exception / Compile Time -- syntax mistake
+IO Exception, SQL Exception, ClassNotFound Exception
+2. Unchecked Exception / Run Time -- logical mistake
+NullPointer, IndexOutOfBound, NumberFormat, Arithmetic
+
+Handling Mechanism
+try : specify block of code where exception can come/occur 
+	  should be followed by either catch or finally
+	  one try block can have multiple catch 
+catch : used to handle exception
+finally : used to execute necessary code, whether 
+		exception occurs & handled
+		exception occurs & not handled
+		exception does not occurs
+throw : used to throw an exception explicitly, can be checked at compile or runtime
+throws : 
+
+Custom Exception 
+- can create own exception that are derived classes of Exception
+
+Sequential -- one after another
+Parallel -- together or sync 
+------- MultiTasking ----------
+- It is a process of executing multiple task simultaneously
+- We use multitasking to utilize CPU 
+	- MultiProcessing
+			each process has separate memory area allocated
+			a process is heavyweight
+			cost of communication is high
+			switch from one process to another requires some time 
+	- MultiThreading
+		threads share same address space
+		thread is lightweight
+		cost of communication is low 
+		
+Threads
+- lightweight, subprocess, smallest unit of processing
+- different path of execution
+- all threads are independent
+- use a shared memory area
+- at a time one thread is executed
+
+
+- Life Cycle 
+1. New : thread is created
+2. Active : thread invokes start() 
+	Runnable : thread to ready to run then moved to runnbale state
+	Running : thread get the CPU, it moves from runnable to running
+3. Blocked / Waiting : when thread is inactive for span of time 
+4. Timely waiting : sometime waiting is timely using sleep()
+5. Terminated :
+
+- Using Thread Class
+start(), run(), sleep(), join(), getPriority(), setPriority(), currentThread(),wait(), notify(),
+- Using Runnable Interface
+run()
+
+Thread Scheduler
+component of java that decides which thread to run & which thread is to wait
+- priority : norm(5), min(0), max(10), by default every thread has normal priority
+- time of arrival
+
+Collection
+- java.util package
+- an framework which provides to store & manipulate the group of objects
+- basic operations such as searching, sorting, insertion, deletion and manipulation
+- Interface (List, Set, Queue) 
+
+Traversing (iterate the elements of collection)
+- for loop
+- for each loop
+- iterator
+- listiterator
+- foreach()
+
+
+List In
+- provides facility to maintain the ordered collection
+- its index based methods(insert, update, delete,search)
+- It can have duplicate elements
+- It allow to store null elements
+- can be implement with classes ArrayList, LinkedList, Stack, Vector
+
+ArrayList Cl
+- uses dynamic array for storing elements
+- its like array but no size limit
+- can add or remove elements anytime
+- its non-synchronized
+- allow random access as it work on index
+- manipulation is bit slow as compared to linkedlist, coz shifting needs to occur
+- used more storing & accessing elements
+
+LinkedList Cl
+- it uses a doubly linked list to store elements
+- non synchronized
+- manipulation is fast coz no shifting occurs
+- used more for manipulation
+
+Vector 
+- its is synchronized
+- slow as compared arraylist or linkedlist coz is sync
+
+Stack
+- LIFO
+- push() to add element & pop() to remove element
+
+Set
+- it represent unordered collection
+- it doesnt allow duplicate elements
+- can store at most one null value 
+- Set is implemented by Hashset, LinkedHashset, Treeset
+
+Hashset
+- elements stored using hasing mechanism
+- non-synchronized
+- insertion order based on hashcode
+- used for search operations
+- allow at least one null element
+
+LinkedHashset
+- its a class of hashtable & linkedlist
+- non-synchronized
+- maintain insertion order
+- allow null element
+
+Treeset
+- maintain ascending order
+- non-synchronized
+- does not allow null elements
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Collection
+JDBC
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
