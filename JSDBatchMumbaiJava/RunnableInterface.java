@@ -1,5 +1,3 @@
-package myProgram;
-
 class MyThreadRunnable1 implements Runnable{
 	public void run() {
 		int i = 0;
@@ -22,9 +20,8 @@ class MyThreadRunnable2 implements Runnable{
 
 
 public class RunnableInterface {
-
-	public static void main(String[] args) {
-		MyThreadRunnable1 bullet1 = new MyThreadRunnable1();
+    public static void main(String[] args) {
+        MyThreadRunnable1 bullet1 = new MyThreadRunnable1();
 		Thread gun1 = new Thread(bullet1);
 		
 		
@@ -32,6 +29,5 @@ public class RunnableInterface {
 		Thread gun2 = new Thread(bullet2);
 		gun1.start();
 		gun2.start();
-	}
-
+    }
 }
