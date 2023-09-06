@@ -1,4 +1,4 @@
-package com.example.demo.entity;
+package com.firsteg.springproject;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -9,7 +9,7 @@ import jakarta.validation.constraints.NotNull;
 
 @Entity
 public class Teacher {
-	@Id
+    @Id
 	private int tid;
 	
 	@Column(length = 50,nullable = false)
@@ -22,7 +22,7 @@ public class Teacher {
 	
 	@Column(length = 50,nullable = false,unique = true)
 	@Email
-	@NotBlank(message = "This is not a Email")
+	@NotBlank(message = "Trainer Email cannot be null")
 	private String temail;
 	
 	@Column(length = 50,nullable = false, unique = true)
@@ -81,8 +81,5 @@ public class Teacher {
 	public void setDesignation(String designation) {
 		this.designation = designation;
 	}
-	
-	
-	
-	
+
 }
