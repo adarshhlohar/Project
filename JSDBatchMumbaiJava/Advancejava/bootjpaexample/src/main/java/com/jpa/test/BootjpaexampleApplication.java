@@ -32,16 +32,16 @@ public class BootjpaexampleApplication {
 		
 		
 //		CRUD methods
-//		User user1 = new User();
-//		user1.setName("Adsrsh");
-//		user1.setCity("pune");
-//		user1.setStatus("Programmer");
+		User user1 = new User();
+		user1.setName("Adsrsh");
+		user1.setCity("pune");
+		user1.setStatus("Programmer");
 		
 		
-//		User user2 = new User();
-//		user2.setName("addi");
-//		user2.setCity("bengluru");
-//		user2.setStatus("java programmer");
+		User user2 = new User();
+		user2.setName("addi");
+		user2.setCity("bengluru");
+		user2.setStatus("java programmer");
 		
 //		saving single user
 //		User resultUser = userRepo.save(user1);
@@ -49,9 +49,9 @@ public class BootjpaexampleApplication {
 		
 		
 //		Saving all the data at onetime 
-//		List<User> users = List.of(user1,user2);
-//		
-//		Iterable<User> result = userRepo.saveAll(users);
+//		List<User> usersAddAll = List.of(user1,user2);
+////		
+//		Iterable<User> result = userRepo.saveAll(usersAddAll);
 //		System.out.println("Saved all users" + result);
 //		
 ////		using forEach Iterator
@@ -102,10 +102,33 @@ public class BootjpaexampleApplication {
 //		
 		
 //		deleting multiples 
-		Iterable<User> allusers = userRepo.findAll();
-		allusers.forEach(users->{
-			userRepo.deleteAll(allusers);
-		});
+//		Iterable<User> allusers = userRepo.findAll();
+//		allusers.forEach(users->{
+//			userRepo.deleteAll(allusers);
+//		});
+		
+		
+//		System.out.println("This is matching element is by name");
+//		List<User> users= userRepo.findByName("addi");
+//		users.forEach(elem->System.out.println(elem));
+//		
+//		
+//		System.out.println("This is matching element in  city and name");
+//		List<User> nameAndCity = userRepo.findByNameAndCity("addi", "bengluru");
+//		nameAndCity.forEach(e->System.out.println(e));
+		
+		
+//		System.out.println("Using the query annotation");
+//		List<User> allUser = userRepo.getAllUser();
+//		allUser.forEach(e->System.out.println(e));
+		
+//		List<User> users = userRepo.getWithName("addi");
+//		users.forEach(e->System.out.println(e));
+		
+		
+		List<User> users = userRepo.getAllByNativeQuery();
+		
+		users.forEach(e->System.out.println(e));
 		
 		System.out.println("done.....");
 		

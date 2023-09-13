@@ -1,5 +1,7 @@
 package com.example.demo.teacherserviceimpl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -52,6 +54,20 @@ public class TeacherServiceImpl implements TeacherService {
 	public void deleteTeacherDetail(int tid) {
 		trepo.findById(tid).orElseThrow(() -> new TeacherNotFoundexception("Teacher Id is not correct"));
 		trepo.deleteById(tid);
+	}
+	
+	@Override
+	public Teacher getTeacherByPhone(long tphone) {
+		return trepo.findTeacherByPhone(tphone);
+	}
+	
+	@Override
+	public List<Teacher> getTeacherByName(String tname) {
+		return trepo.findTeacherByName(tname);
+	}
+	
+	public List<Teacher> getTeacherByDegination(String desination) {
+		return trepo.findTeacherByDegisnation(desination);
 	}
 
 }
