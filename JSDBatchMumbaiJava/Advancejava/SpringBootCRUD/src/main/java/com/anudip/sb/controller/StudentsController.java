@@ -27,18 +27,18 @@ public class StudentsController {
 	}
 	
 	@GetMapping("/Students/gesstudents/{sid}")
-	public ResponseEntity<Students> gesstudenss(@PathVariable int sid){
+	public ResponseEntity<Students> gesstudenss(@PathVariable("sid") int sid){
 		return new ResponseEntity<Students>(ss.getStudentsDetail(sid),HttpStatus.OK);
 	}
 	
 	@DeleteMapping("Students/removeStudents/{sid}")
-	public ResponseEntity<String> deleteStudenss(@PathVariable int sid){
+	public ResponseEntity<String> deleteStudenss(@PathVariable("sid") int sid){
 		ss.deleteStudentsDetail(sid);
 		return new ResponseEntity<String>("Deleted Successfully..", HttpStatus.OK);
 	}
 	
 	@PutMapping("/Students/edisstudents/{sid}")
-	public ResponseEntity<Students> edisstudenss(@Valid @PathVariable int sid, @RequestBody Students students){
+	public ResponseEntity<Students> edisstudenss(@Valid @PathVariable("sid") int sid, @RequestBody Students students){
 		return new ResponseEntity<Students>(ss.updateStudentsDetail(students, sid), HttpStatus.OK);
 	}
 }

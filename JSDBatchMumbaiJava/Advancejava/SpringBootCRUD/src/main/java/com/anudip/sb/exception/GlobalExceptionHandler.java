@@ -25,4 +25,25 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler{
 		ErrorMessage em = new ErrorMessage(HttpStatus.NOT_FOUND, ex.getMessage());
 		return ResponseEntity.status(HttpStatus.NOT_FOUND).body(em);
 	}
+	
+	@ExceptionHandler(DeptartmentIdNotFoundException.class)
+	public ResponseEntity<ErrorMessage> handleDepartmentException
+	(DeptartmentIdNotFoundException ex, WebRequest request){
+		ErrorMessage em = new ErrorMessage(HttpStatus.NOT_FOUND, ex.getMessage());
+		return ResponseEntity.status(HttpStatus.NOT_FOUND).body(em);
+	}
+	
+	@ExceptionHandler(CourseNotFoundException.class)
+	public ResponseEntity<ErrorMessage> handleCourseException
+	(CourseNotFoundException ex, WebRequest request){
+		ErrorMessage em = new ErrorMessage(HttpStatus.NOT_FOUND, ex.getMessage());
+		return ResponseEntity.status(HttpStatus.NOT_FOUND).body(em);
+	}
+	
+	@ExceptionHandler(BatchNotFoundException.class)
+	public ResponseEntity<ErrorMessage> handlebatchException
+	(BatchNotFoundException ex, WebRequest request){
+		ErrorMessage em = new ErrorMessage(HttpStatus.NOT_FOUND, ex.getMessage());
+		return ResponseEntity.status(HttpStatus.NOT_FOUND).body(em);
+	}
 }

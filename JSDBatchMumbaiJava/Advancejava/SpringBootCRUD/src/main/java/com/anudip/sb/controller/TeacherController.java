@@ -32,37 +32,37 @@ public class TeacherController {
 	
 	//use getmapping to fetch data from db table
 	@GetMapping("/Teacher/getTeacher/{tid}")
-	public ResponseEntity<Teacher> getTeacher(@PathVariable int tid){
+	public ResponseEntity<Teacher> getTeacher(@PathVariable("tid") int tid){
 		return new ResponseEntity<Teacher>(ts.getTeacherDetail(tid),HttpStatus.OK);
 	}
 	
 	//use putmapping to edit existing data
 	@PutMapping("/Teacher/editTeacher/{tid}")
-	public ResponseEntity<Teacher> editTeacher(@Valid @PathVariable int tid, @RequestBody Teacher teacher){
+	public ResponseEntity<Teacher> editTeacher(@Valid @PathVariable("tid") int tid, @RequestBody Teacher teacher){
 		return new ResponseEntity<Teacher>(ts.updateTeacherDetail(teacher, tid), HttpStatus.OK);
 	}
 	
 	
 	//use deletemapping to remove existing data
 	@DeleteMapping("Teacher/removeTeacher/{tid}")
-	public ResponseEntity<String> deleteTeacher(@PathVariable int tid){
+	public ResponseEntity<String> deleteTeacher(@PathVariable("tid") int tid){
 		ts.deleteTeacherDetail(tid);
 		return new ResponseEntity<String>("Deleted Successfully..", HttpStatus.OK);
 	}
 	
 //	@GetMapping("Teacher/getTName/{tname}")
-	public List<Teacher> getTeacherName(@PathVariable String tname){
+	public List<Teacher> getTeacherName(@PathVariable("tname") String tname){
 		return ts.getTeacherByName(tname);
 	}
 	
 	@GetMapping("Teacher/getTPhone/{tphone}")
-	public ResponseEntity<Teacher> getTeacherPhone(@PathVariable long tphone){
+	public ResponseEntity<Teacher> getTeacherPhone(@PathVariable("tphone") long tphone){
 		return new ResponseEntity<Teacher>(ts.getTeacherByPhone(tphone), HttpStatus.OK);
 	}
 	
 	
 	@GetMapping("Teacher/getTDesignation/{designation}")
-	public List<Teacher> getTeacherDesignation(@PathVariable String designation){
+	public List<Teacher> getTeacherDesignation(@PathVariable("designation") String designation){
 		return ts.getTeacherdesignation(designation);
 	}
 	

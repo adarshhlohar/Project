@@ -1,8 +1,14 @@
 package com.anudip.sb.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -44,5 +50,10 @@ public class Students {
 	@Column(length=50, nullable = false)
 	@NotBlank(message = "Student Address cannot be blank")
 	private String saddr;
+	
+	@OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+	@JoinColumn(name="courseID", referencedColumnName = "cid")
+	@JsonBackReference
+	private Courses course;
 
 }
