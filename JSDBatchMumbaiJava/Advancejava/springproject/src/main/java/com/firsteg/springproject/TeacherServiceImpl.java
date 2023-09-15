@@ -24,14 +24,12 @@ public class TeacherServiceImpl implements TeacherService {
         {
             Teacher updatedTeacher = trepo.findById(tid)
                     .orElseThrow(() -> new TeacherNotFoundException("Teacher Id is not correct"));
-
             // set new values
             updatedTeacher.setTphone(teacher.getTphone());
             updatedTeacher.setDesignation(teacher.getDesignation());
 
             trepo.save(updatedTeacher); // saving updated details
             return updatedTeacher;
-
         }
     }
 
@@ -40,5 +38,4 @@ public class TeacherServiceImpl implements TeacherService {
         trepo.findById(tid).orElseThrow(() -> new TeacherNotFoundException("Teacher Id is not correct"));
         trepo.deleteById(tid);
     }
-
 }
