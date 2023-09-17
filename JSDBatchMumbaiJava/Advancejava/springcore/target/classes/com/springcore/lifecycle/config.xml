@@ -11,4 +11,10 @@
 			<value>10</value>
 		</property>
 	</bean>
+	
+	<bean class="com.springcore.lifecycle.Pepsi" name="p1">
+		<property name="price">
+			<value>5</value>
+		</property>
+	</bean>
 </beans>

@@ -11,6 +11,8 @@ public class Test {
 		Samosa var = (Samosa) context.getBean("s1");
 		System.out.println(var);
 		context.registerShutdownHook();
+		
+		Pepsi p = (Pepsi) context.getBean("p1");
+		System.out.println(p);
 		}
-
 }
