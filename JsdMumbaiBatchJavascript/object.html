@@ -1,0 +1,29 @@
+<html>
+<body>
+<script>
+//creating an object car 
+let car = {
+color : "white", //properties property:value;
+price : 700000,
+model : "tataA1",
+brand : "Tata",
+//object method display
+display : function(){
+	return this.color +" "+ this.model +" "+ this.brand;
+}
+};
+//creating an object human
+let human = {
+name : "mamta",
+height : 5.5,
+color : "white",
+weight : 55
+}
+
+//document.write(car.color +" "+ car.price); //printing properties with objectname
+document.write(car.display()); //calling method to print properties 
+document.write("<br>");
+document.write (human.name +" "+human.height +" "+ human.color); //printing properties with object(human)
+</script>
+</body>
+</html>
