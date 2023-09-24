@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let laptop ={
+            brand : "Hp",
+            processor : "ryzen 5",
+            ram : "8 GB",
+            rom : "512 GB",
+            info : function() {
+                return (this.brand + ", " +  this.processor + ", " + this.ram + ", " + this.rom);
+            }
+        }
+
+        function myInfo() {
+            alert("How are you!!");
+        }
+        function myInfo2() {
+            alert("I am fine!");
+        }
+
+        function add() {
+            alert("this is mouse move")
+        }
+
+        function mouseDown() {
+            document.getElementById("p1").style.color ="pink";
+        }
+        
+        function mouseUp() {
+            document.getElementById("p1").style.color ="red"; 
+        }
+        console.log(laptop.info());
+        console.log(laptop);
+    </script>
+
+    <button onclick="myInfo()">onclick</button>
+    <button ondblclick="myInfo2()">ondblclick</button>
+    <button onmouseover="add()">add</button>
+    <p id="p1" onmousedown="mouseDown()" onmouseup="mouseUp()">Hello I am learning javascript</p>
+</body>
+</html>
