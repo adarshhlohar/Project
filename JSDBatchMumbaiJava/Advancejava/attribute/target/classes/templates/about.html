@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.thymeLeaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li><a th:href="@{/home/homepage}">home</a></li>
+        <li><a th:href="@{/home/about}">about</a></li>
+        <li><a th:href="@{/home/services}">services</a></li>
+    </ul>
+    <h1>This is about page</h1>
+    <div>
+        <h1 th:text="${session.message}"></h1>
+    </div>
+</body>
+</html>
