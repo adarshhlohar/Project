@@ -1,0 +1,27 @@
+<html>
+<body>
+<script>
+try{
+let num = 101;
+num.toLowerCase();
+document.write(num);
+}
+catch(err){
+document.write(err.name + "  Cannot convert number to String " + "<br>"); //err.name returns error name
+}
+</script>
+
+<script>
+try{
+let name1 = proompt("Enter Name ");
+}
+catch(err){
+document.write(err.message + "<br>"); //err.message return error message 
+}
+
+finally{
+document.write("Hello");
+}
+</script>
+</body>
+</html>

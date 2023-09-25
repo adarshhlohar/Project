@@ -1,0 +1,33 @@
+<html>
+  <body>
+    <script>
+      //parent class
+      class Parent1 {
+        //constructor with name paremeter
+        constructor(name) {
+          this.name = name;
+        }
+
+        //print paramter
+        display() {
+          return "My name is " + this.name;
+        }
+      }
+      //child class extends parent class
+      class Child1 extends Parent1 {
+        //constructor with child & parent property
+        constructor(name, surname) {
+          super(name);
+          this.surname = surname;
+        }
+        //printing property
+        show() {
+          return this.display() + " My surname is " + this.surname;
+        }
+      }
+      //object of child class
+      const aa = new Child1("Mamta", "Boga");
+      document.write(aa.show() + "<br>"); //accessing method with object
+    </script>
+  </body>
+</html>

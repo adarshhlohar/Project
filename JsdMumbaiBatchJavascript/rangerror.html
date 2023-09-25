@@ -1,0 +1,21 @@
+<html>
+<body>
+<script>
+function check(num) {
+if(!(num>=-50 && num<=50)){
+throw new RangeError("Number should be between -50 to 50");
+}
+else {
+document.write(num);
+}
+}
+
+try{
+check(250);
+}
+catch(err){
+document.write(err);
+}
+</script>
+</body>
+</html>
