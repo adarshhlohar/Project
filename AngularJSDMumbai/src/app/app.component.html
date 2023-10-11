@@ -1,0 +1,36 @@
+<div class="container my-3">
+  <h1 class="text-center">Student Login Form</h1>
+  <form #useForm = "ngForm">
+    {{useForm.value | json }}
+    <hr>
+    {{userModel| json}}
+    <div class="form-group">
+    <label for="Name">Enter First Name</label>
+    <input type="text" name="fName" #fName="ngModel" class="form-control my-1" id="userName" [(ngModel)]="userModel.fName" [class.is-invalid]="fName.invalid && fName.touched" required> 
+    <small class="text-danger" [class.d-none]="fName.valid || fName.untouched"> Name is required </small>
+  </div>
+    <div class="form-group">
+    <label for="LName">Enter Last Name</label>
+    <input type="text" name="lName" class="form-control my-1" id="LName" [(ngModel)]="userModel.lName" #lName="ngModel" [class.is-invalid]="lName.invalid && lName.touched" required> 
+  </div>
+    <div class="form-group">
+    <label for="Phone">Enter Phone No</label>
+    <input type="tel" name="Phone" class="form-control my-1" id="Phone" [(ngModel)]="userModel.Phone" #Phone="ngModel" [class.is-invalid]="Phone.invalid && Phone.touched" pattern="^\d{10}$" required> 
+    <!-- <small class="text-danger" [class.d-none]="Phone.valid || Phone.untouched"> Phone number must be 10 digit</small> -->
+    <div *ngIf="Phone.errors && (Phone.invalid && Phone.touched)" >
+      <small class="text-danger" *ngIf="Phone.errors.required">Phone number is required</small>
+      <small class="text-danger" *ngIf="Phone.errors.pattern">Phone must be 10 digits</small>
+    </div>
+  </div>
+    <div class="form-group">
+    <label for="userName">Enter UserName</label>
+    <input type="email" name="userName" class="form-control my-1" id="userName" placeholder="Enter Youre Email" [(ngModel)]="userModel.userName" #userName="ngModel" [class.is-invalid]="userName.invalid && userName.touched" required> 
+  </div>
+    <div class="form-group my-2">
+    <label for="Password">Enter Password</label>
+    <input type="password" name="password" class="form-control my-1" [(ngModel)]="userModel.password" id="Password" required> 
+  </div>
+
+  <button type="submit" class="btn btn-primary btn-sm my-2" >Login Here</button>
+  </form>
+</div>
